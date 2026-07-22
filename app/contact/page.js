@@ -1,5 +1,4 @@
 import PathDivider from '@/components/PathDivider';
-import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: "Contact | Avodah Children's Mission",
@@ -28,7 +27,7 @@ export default function ContactPage() {
       <PathDivider tone="gold" />
 
       <section className="bg-sand">
-        <div className="max-w-content mx-auto px-5 md:px-8 py-20 md:py-24 grid md:grid-cols-2 gap-16">
+        <div className="max-w-content mx-auto px-5 md:px-8 py-20 md:py-24">
           <div>
             <h2 className="font-display text-2xl font-semibold text-navy mb-8">Reach us directly</h2>
             <ul className="space-y-6">
@@ -39,14 +38,9 @@ export default function ContactPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-8 text-sm text-ink/50">
-              Replace the placeholders above with your real contact details before launch.
+            <p className="mt-4 text-sm text-ink/50">
+              All inquiries should use the contact information above; the contact form has been removed.
             </p>
-          </div>
-
-          <div>
-            <h2 className="font-display text-2xl font-semibold text-navy mb-8">Send a message</h2>
-            <ContactForm />
           </div>
         </div>
       </section>

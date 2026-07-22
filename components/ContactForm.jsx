@@ -2,29 +2,64 @@
 
 import { useState } from 'react';
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/yourFormId';
+
 export default function ContactForm() {
   const [status, setStatus] = useState('idle');
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [submittedName, setSubmittedName] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   function handleChange(e) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    // Placeholder: wire this up to an email service (e.g. Resend, Formspree) or an API route.
-    setStatus('sent');
+    setErrorMessage('');
+    setStatus('sending');
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _replyto: form.email,
+          _subject: 'New message from Avodah website',
+        }),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || 'Submission failed');
+      }
+
+      setSubmittedName(form.name);
+      setForm({ name: '', email: '', message: '' });
+      setStatus('sent');
+    } catch (error) {
+      console.error(error);
+      setErrorMessage(
+        'Sorry, we could not send your message. Please try again or email us directly.'
+      );
+      setStatus('error');
+    }
   }
 
   if (status === 'sent') {
     return (
       <div className="bg-leaf/10 border border-leaf/30 rounded-lg p-6">
         <p className="font-medium text-leaf-deep">
-          Thanks, {form.name || 'friend'} &mdash; your message is ready to send.
+          Thanks, {submittedName || 'friend'} &mdash; your message was sent.
         </p>
         <p className="text-sm text-ink/60 mt-2">
-          This form isn&rsquo;t connected to an inbox yet. Add an email service (like Resend or
-          Formspree) to start receiving these for real.
+          We&rsquo;ll be in touch soon.
         </p>
       </div>
     );
@@ -76,10 +111,16 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="bg-clay hover:bg-clay-deep transition-colors text-sand px-7 py-3 rounded-full font-medium"
+        disabled={status === 'sending'}
+        className="bg-clay hover:bg-clay-deep transition-colors text-sand px-7 py-3 rounded-full font-medium disabled:cursor-not-allowed disabled:opacity-70"
       >
-        Send message
+        {status === 'sending' ? 'Sending…' : 'Send message'}
       </button>
+      {status === 'error' && (
+        <p className="text-sm text-red-600 mt-2">
+          {errorMessage}
+        </p>
+      )}
     </form>
   );
 }

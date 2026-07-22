@@ -22,7 +22,7 @@ export const metadata = {
   title: "Avodah Children's Mission | Love. Care. Disciple. Empower.",
   description:
     "Avodah Children's Mission protects, educates, empowers and evangelizes vulnerable children in Uganda through education, health, water and community programs.",
-  metadataBase: new URL('https://example.com'),
+  metadataBase: new URL('https://https://avodah-seven.vercel.app'),
   openGraph: {
     title: "Avodah Children's Mission",
     description:
