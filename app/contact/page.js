@@ -38,9 +38,6 @@ export default function ContactPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-ink/50">
-              All inquiries should use the contact information above; the contact form has been removed.
-            </p>
           </div>
         </div>
       </section>
