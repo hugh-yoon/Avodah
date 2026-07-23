@@ -9,7 +9,7 @@ const channels = [
   { label: 'Phone', value: '+256393217945' },
   { label: 'WhatsApp', value: '0772066789' },
   { label: 'Email', value: 'avodahcm@outlook.com' },
-  { label: 'Facebook', value: 'https://www.facebook.com/people/Avodah-Childrens-Mission/61591418400796/#' },
+  { label: 'Facebook', value: 'https://www.facebook.com/people/Avodah-Childrens-Mission/61591418400796' },
 ];
 
 export default function ContactPage() {
