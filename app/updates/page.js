@@ -1,14 +1,11 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
 import PathDivider from '@/components/PathDivider';
 
 const posts = [
   {
     title: 'A new term begins at our schools',
     excerpt:
-      'Placeholder post \u2014 replace with a short update once your first newsletter or blog entry is ready.',
+      'Placeholder post \u2014 replace with a short update once your first blog entry is ready.',
     image: '/images/classroom-benches.jpg',
   },
   {
@@ -26,15 +23,6 @@ const posts = [
 ];
 
 export default function UpdatesPage() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    // Placeholder: wire this up to your email provider (Mailchimp, Buttondown, etc.)
-    setSubmitted(true);
-  }
-
   return (
     <>
       <section className="bg-navy text-sand">
@@ -67,42 +55,6 @@ export default function UpdatesPage() {
         </div>
       </section>
 
-      <PathDivider tone="clay" />
-
-      <section className="bg-clay text-sand">
-        <div className="max-w-content mx-auto px-5 md:px-8 py-20 md:py-24 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            Get our monthly newsletter
-          </h2>
-          <p className="text-sand/85 max-w-xl mx-auto mb-9 leading-relaxed">
-            Short, honest updates from our schools, hospital and water projects &mdash; straight
-            to your inbox once a month.
-          </p>
-
-          {submitted ? (
-            <p className="font-medium">Thanks &mdash; you&rsquo;re on the list. (Placeholder confirmation \u2014 connect a real email provider to send confirmations.)</p>
-          ) : (
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-              <input
-                id="newsletter-email"
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="flex-1 rounded-full px-5 py-3 text-ink placeholder:text-ink/40 outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-navy-deep hover:bg-navy transition-colors px-7 py-3 rounded-full font-medium"
-              >
-                Sign up
-              </button>
-            </form>
-          )}
-        </div>
-      </section>
     </>
   );
 }

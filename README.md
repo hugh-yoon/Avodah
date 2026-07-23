@@ -9,7 +9,7 @@ the organized content doc and photos provided.
 - `/about` — People, Our Story, Why Uganda, Vision/Mission, Objectives, Values, Our Model
 - `/our-work` — Education, Health, Water, Community Outreach
 - `/get-involved` — Sponsor a Child, Donate, Partner With Us, Volunteer
-- `/updates` — Blog placeholder + newsletter sign-up
+- `/updates` — Blog placeholder
 - `/contact` — Contact channels only, no contact form
 
 ## Before you launch: things to fill in
@@ -21,9 +21,8 @@ Search the codebase for these placeholders and replace them with real info:
    - `app/contact/page.js`
 2. **Sponsorship link** — the "Start sponsoring" button in `app/get-involved/page.js` (`id="sponsor"`)
 3. **Donate links** — each project card's "Give toward this" link in `app/get-involved/page.js` (`id="donate"`). Once you have a payment processor (Stripe, PayPal, GoFundMe, Give Lively, etc.), swap the `href="#"` for the real checkout link.
-4. **Newsletter form** — `app/updates/page.js` currently just shows a confirmation message. Connect a real provider (Mailchimp, Buttondown, Kit) by replacing the `handleSubmit` function with an API call.
-5. **Contact details** — the contact page now uses direct contact info only. Replace the placeholders in `app/contact/page.js` with the real phone, WhatsApp, email, and Facebook details people should use.
-6. **Domain** — the `metadataBase` URL in `app/layout.js` is set to `https://example.com`; update it to your real domain once you have one.
+4. **Contact details** — the contact page now uses direct contact info only. Replace the placeholders in `app/contact/page.js` with the real phone, WhatsApp, email, and Facebook details people should use.
+5. **Domain** — the `metadataBase` URL in `app/layout.js` is set to `https://example.com`; update it to your real domain once you have one.
 
 ## Run it locally
 

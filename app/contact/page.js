@@ -6,10 +6,10 @@ export const metadata = {
 };
 
 const channels = [
-  { label: 'Phone', value: '[Add phone number]' },
-  { label: 'WhatsApp', value: '[Add WhatsApp number]' },
-  { label: 'Email', value: '[Add email address]' },
-  { label: 'Facebook', value: '[Add Facebook page link]' },
+  { label: 'Phone', value: '+256393217945' },
+  { label: 'WhatsApp', value: '0772066789' },
+  { label: 'Email', value: 'avodahcm@outlook.com' },
+  { label: 'Facebook', value: 'https://www.facebook.com/people/Avodah-Childrens-Mission/61591418400796/#' },
 ];
 
 export default function ContactPage() {
