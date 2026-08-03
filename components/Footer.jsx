@@ -40,10 +40,30 @@ export default function Footer() {
         <div>
           <h3 className="font-display text-sm uppercase tracking-wider text-gold mb-4">Contact</h3>
           <ul className="space-y-2 text-sm text-sand/80">
-            <li>Phone: <span className="text-sand/60">[Add phone number]</span></li>
-            <li>WhatsApp: <span className="text-sand/60">[Add WhatsApp number]</span></li>
-            <li>Email: <span className="text-sand/60">[Add email address]</span></li>
-            <li>Facebook: <span className="text-sand/60">[Add Facebook page link]</span></li>
+            <li>
+              Phone:{' '}
+              <a href="tel:+256393217945" className="text-sand/60 hover:text-gold transition-colors">
+                +256393217945
+              </a>
+            </li>
+            <li>
+              WhatsApp:{' '}
+              <a href="https://wa.me/256772066789" target="_blank" rel="noreferrer" className="text-sand/60 hover:text-gold transition-colors">
+                0772066789
+              </a>
+            </li>
+            <li>
+              Email:{' '}
+              <a href="mailto:avodahcm@outlook.com" className="text-sand/60 hover:text-gold transition-colors">
+                avodahcm@outlook.com
+              </a>
+            </li>
+            <li>
+              Facebook:{' '}
+              <a href="https://www.facebook.com/people/Avodah-Childrens-Mission/61591418400796" target="_blank" rel="noreferrer" className="text-sand/60 hover:text-gold transition-colors">
+                Avodah Children&rsquo;s Mission
+              </a>
+            </li>
           </ul>
         </div>
       </div>
