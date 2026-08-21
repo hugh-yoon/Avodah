@@ -50,6 +50,12 @@ const workAreas = [
     body: 'We promote coffee growing through processing, grading and roasting, and organize farmers into small groups.',
     href: '/our-work#community-outreach',
   },
+  {
+    title: 'Evangelism',
+    stat: 'Churches and ministries equipped',
+    body: 'We work with churches to train pastors and children’s ministry leaders to disciple children in their communities.',
+    href: '/our-work#evangelism',
+  },
 ];
 
 export default function HomePage() {
@@ -103,8 +109,8 @@ export default function HomePage() {
         <div className="max-w-content mx-auto px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-[0.9fr,1.1fr] gap-12 items-center">
           <div className="relative aspect-[4/5] rounded-md overflow-hidden">
             <Image
-              src="/images/two-kids-tree.jpg"
-              alt="Two Ugandan children standing together beside a tree"
+              src="/images/henry.JPG"
+              alt="Henry Lutwama, founder and executive director of Avodah Children’s Mission"
               fill
               className="object-cover"
             />
@@ -182,7 +188,7 @@ export default function HomePage() {
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-navy">Our Work</h2>
               <p className="mt-4 text-ink/70 max-w-lg leading-relaxed">
-                Four programs, one goal: children who are protected, educated, healthy and
+                Five programs, one goal: children who are protected, educated, healthy and
                 connected to a thriving community.
               </p>
             </div>

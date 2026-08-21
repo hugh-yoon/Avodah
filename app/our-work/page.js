@@ -49,6 +49,16 @@ const programs = [
     approach: 'We organize farmers into small groups so that training, tools and support reach more households efficiently.',
     impact: 'We support farmers by distributing agricultural inputs through community groups.',
   },
+  {
+    id: 'evangelism',
+    title: 'Evangelism',
+    tone: 'navy',
+    image: '/images/boy-jerrycan.jpg',
+    alt: 'A boy carrying a yellow jerrycan in a rural Ugandan community',
+    what: 'We work with churches to train pastors and children’s ministry leaders to disciple children in their communities.',
+    approach: 'We equip local church leaders with practical training and support so they can nurture children’s faith and care for their wider communities.',
+    impact: 'Church leaders and children’s ministry teams are equipped to serve and disciple children.',
+  },
 ];
 
 const toneClasses = {
@@ -65,12 +75,12 @@ export default function OurWorkPage() {
         <div className="max-w-content mx-auto px-5 md:px-8 pt-16 pb-20 md:pt-24 md:pb-28">
           <p className="uppercase tracking-[0.25em] text-gold text-xs mb-4">Our Work</p>
           <h1 className="font-display text-4xl md:text-6xl font-semibold max-w-3xl text-balance">
-            Four programs. One connected model.
+            Five programs. One connected model.
           </h1>
           <p className="mt-6 text-sand/75 max-w-xl leading-relaxed">
-            Education, health, water and community outreach reinforce one another &mdash; a child
-            who is in school also needs to be healthy, hydrated, and part of a household that can
-            provide.
+            Education, health, water, community outreach and evangelism reinforce one another
+            &mdash; a child who is in school also needs to be healthy, hydrated, supported at home,
+            and cared for by their community.
           </p>
         </div>
       </section>
