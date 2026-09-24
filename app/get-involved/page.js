@@ -7,12 +7,10 @@ export const metadata = {
 };
 
 const donateItems = [
-  { label: 'Boreholes', amount: 'US$4,500 each', note: 'Target: 10 per year' },
-  { label: 'School Water Tanks', amount: 'US$2,000 each', note: 'Target: 10 per year' },
-  { label: 'Pit Latrines', amount: 'US$4,000 each', note: 'Target: 5 per year' },
-  { label: 'School Land', amount: 'US$30,000', note: 'For 10 acres' },
-  { label: 'School Feeding', amount: 'US$18,000 per school, per term', note: 'Target: 2 schools annually' },
-  { label: 'Medical Check-ups & Deworming', amount: 'US$18,000 per year', note: '10 schools, 7,000+ children served' },
+  { label: 'Water to Schools', amount: 'Give a gift', note: 'Help bring clean water to students.' },
+  { label: 'Mobile Medical Clinic', amount: 'Give a gift', note: 'Help bring medical care to communities.' },
+  { label: 'Sponsor a Child', amount: 'Give a gift', note: 'Help provide care, education, and opportunity.' },
+  { label: 'Pastor Training Program', amount: 'Give a gift', note: 'Help equip pastors and children’s ministry leaders.' },
 ];
 
 export default function GetInvolvedPage() {
@@ -68,7 +66,7 @@ export default function GetInvolvedPage() {
             Fund a specific, tangible need. Every gift below funds real infrastructure our
             communities are waiting on.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {donateItems.map((d) => (
               <div key={d.label} className="border border-sand/20 rounded-lg p-6 flex flex-col">
                 <h3 className="font-display font-semibold text-gold text-lg mb-2">{d.label}</h3>
